@@ -102,9 +102,37 @@ function Products() {
 //Footer Section
 function ZuriFooter() {
     return(
-        <section>
+        <section className="footer_zuri">
             <div className="contact_links">
+                <ul>
+                    <li>
+                        <img src={Logo} alt="" />
+                    </li>
+                    <li>
+                        <h4 className="footer_heading">
+                            Links
+                        </h4>
+                        <p className="items">
 
+                        </p>
+                    </li>
+                    <li>
+                        <h4 className="footer_heading">
+                            Contact 
+                        </h4>
+                        <p className="items">
+                            
+                        </p>
+                    </li>
+                    <li>
+                        <h4 className="footer_heading">
+                            Follow Us
+                        </h4>
+                        <p className="items">
+                            
+                        </p>
+                    </li>
+                </ul>
             </div>
             <div className="copyright">
 
