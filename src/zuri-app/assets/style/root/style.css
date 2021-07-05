@@ -1,0 +1,34 @@
+:root {
+  --red: #E7332B;
+  --hover-red: #EB5850;
+  --font-color: #514949;
+  --white: #fff;
+  --off-white: #FFFAFA;
+}
+
+@font-face {
+  font-family: Averta;
+  src: url("../../fonts/averta.otf");
+}
+
+::after,
+::before,
+* {
+  font-family: Averta, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  color: var(--font-color);
+}
+
+a {
+  color: var(--red);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--hover-red);
+}
+/*# sourceMappingURL=style.css.map */
