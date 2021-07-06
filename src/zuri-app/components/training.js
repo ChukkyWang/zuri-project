@@ -5,10 +5,13 @@ import { CONTACT, CURRICULUM, ENROL, TRAINING } from './utils/routes'
 
 
 //Training Sub Page
-import Enrol from './training-routes/enrol'
-import Contact from './training-routes/contact'
-import Training from './training-routes'
-import Curriculum from './training-routes/curriculum'
+const Enrol  = lazy(() => import("./training-routes/enrol"))
+const Contact  = lazy(() => import("./training-routes/contact"))
+const Training  = lazy(() => import("./training-routes"))
+const Curriculum = lazy(() => import("./training-routes/curriculum"))
+
+
+
 
 function ZuriTraining() {
         const trainingRoutes = ([
@@ -35,15 +38,17 @@ function ZuriTraining() {
         ])
         return (
                 <Fragment>
-                        <TrainingHeader/>
                         <Router>
-                                <Switch>
-                                        {
-                                                trainingRoutes.map(route => (
-                                                        <Route exact={route.exact} path={route.route} component={route.routeComponent}/>
-                                                ))
-                                        }
-                                </Switch>
+                                <TrainingHeader/>
+                                <Suspense fallback="Lo">
+                                        <Switch>
+                                                {
+                                                        trainingRoutes.map(route => (
+                                                                <Route exact={route.exact} path={route.route} component={route.routeComponent}/>
+                                                        ))
+                                                }
+                                        </Switch>
+                                </Suspense>
                         </Router>
                 </Fragment>
         )

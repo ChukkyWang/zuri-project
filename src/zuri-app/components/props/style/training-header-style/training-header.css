@@ -1,1 +1,67 @@
-/* No CSS *//*# sourceMappingURL=training-header.css.map */
+.training_header {
+  height: auto;
+  width: 100%;
+  background-color: var(--off-red);
+}
+
+.training_header nav {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  padding: 50px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.training_header nav .nav_content a {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 100;
+  margin: 0px 20px;
+}
+
+.training_header nav .nav_content a button {
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 8.5px 15px;
+  background-color: var(--red);
+  color: var(--white);
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.training_header nav .nav_content a:hover {
+  color: var(--red);
+}
+
+.welcome_text_others {
+  max-width: 600px;
+  margin: 0px auto;
+  padding: 60px 15px 100px;
+}
+
+.welcome_text_others * {
+  text-align: center;
+}
+
+.welcome_text_others p {
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.welcome_text_others h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.welcome_text_training {
+  max-width: 1200px;
+}
+/*# sourceMappingURL=training-header.css.map */

@@ -4,6 +4,9 @@
   --font-color: #514949;
   --white: #fff;
   --off-white: #FFFAFA;
+  --off-red: #f2ebe9;
+  --form-font: #495057
+;
 }
 
 @font-face {
@@ -30,5 +33,22 @@ a {
 a:hover {
   text-decoration: none;
   color: var(--hover-red);
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--form-font);
+  background-color: var(--white);
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,33 @@
+.contact_tab {
+  max-width: 600px;
+  height: auto;
+  padding: 20px 25px;
+  margin: 0 auto;
+}
+
+.contact_tab h2 {
+  font-size: 1.75rem;
+}
+
+.contact_tab p {
+  margin: 8px 0px 10px;
+}
+
+.contact_tab .input_component {
+  margin: 25px 0px;
+}
+
+.contact_tab .input_component label, .contact_tab .input_component input {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.contact_tab .input_component label {
+  font-weight: 400;
+}
+
+.contact_tab .input_component input {
+  border: 1px solid #514949;
+  opacity: .4;
+}
+/*# sourceMappingURL=style.css.map */

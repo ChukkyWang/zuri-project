@@ -1,0 +1,70 @@
+.training_header{
+        height: auto;
+        width: 100%;
+        background-color: var(--off-red);
+
+        nav{
+                width: 100%;
+                max-width: 1200px;
+                height: auto;
+                margin: 0 auto;
+                padding: 50px 10px;
+                display: flex;
+                justify-content: space-between;
+
+                .nav_content{
+                        a{
+                                color:rgba(0,0,0,.5);
+                                font-weight: 100;
+                                margin: 0px 20px;
+
+                                button{
+                                        font-size: inherit;
+                                        font-weight: inherit;
+                                        padding: 8.5px 15px;
+                                        background-color: var(--red);
+                                        color: var(--white);
+                                        cursor: pointer;
+                                        outline: none;
+                                        border: none;
+                                }
+                        }
+
+                        a:hover{
+                                color: var(--red);
+                        }
+                }
+        }
+}
+
+
+
+
+//Welcome Text
+.welcome_text_others{
+        max-width: 600px;
+        margin: 0px auto;
+        padding: 60px 15px 100px;
+        
+
+        *{
+                text-align: center;
+        };
+
+        p{
+                text-transform: uppercase;
+                color: var(--red);
+                font-weight: 400;
+                margin-bottom: 8px;
+        }
+
+        h2{
+                font-size: 2rem;
+                font-weight: 700;
+        }
+}
+
+
+.welcome_text_training{
+        max-width: 1200px;
+}
