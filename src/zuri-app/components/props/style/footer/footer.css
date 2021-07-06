@@ -1,0 +1,70 @@
+.footer_zuri {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0px auto;
+  margin-bottom: 50px;
+}
+
+.contact_links ul {
+  list-style: none;
+}
+
+.contact_links ul li {
+  float: left;
+  width: 25%;
+  padding: 10px 20px;
+}
+
+.contact_links ul li p {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--font-color);
+  opacity: 0.9;
+  margin: 15px 0px;
+}
+
+.socials_class {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.socials_class a .social_tags {
+  width: 19px;
+  margin: 5px 10px 5px 0px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .contact_links ul li {
+    float: unset;
+    margin: 25px auto;
+    width: 100%;
+  }
+  .contact_links ul li img {
+    display: block;
+    margin: 0 auto;
+  }
+  .contact_links ul li p, .contact_links ul li h4 {
+    text-align: center;
+  }
+  .contact_links ul li p {
+    font-size: 15.5px;
+  }
+  .socials_class {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .socials_class a .social_tags {
+    margin: 5px 15px 5px 0px;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 //Styles
 import './zuri-app/assets/style/root/style.css'
+import ZuriFooter from './zuri-app/components/props/footer';
 
 
 
@@ -30,6 +31,7 @@ function App() {
             </Switch>
           </div>
       </Suspense>
+      <ZuriFooter/>
     </Router>
     
   );
