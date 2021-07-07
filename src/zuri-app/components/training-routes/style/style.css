@@ -2,7 +2,7 @@
   max-width: 600px;
   height: auto;
   padding: 20px 25px;
-  margin: 0 auto;
+  margin: 55px auto;
 }
 
 .contact_tab h2 {
@@ -17,7 +17,7 @@
   margin: 25px 0px;
 }
 
-.contact_tab .input_component label, .contact_tab .input_component input {
+.contact_tab .input_component label, .contact_tab .input_component input, .contact_tab .input_component textarea, .contact_tab .input_component select {
   display: block;
   margin-bottom: 12px;
 }
@@ -26,8 +26,80 @@
   font-weight: 400;
 }
 
-.contact_tab .input_component input {
+.contact_tab .input_component label span {
+  color: var(--red);
+}
+
+.contact_tab .input_component input, .contact_tab .input_component select {
+  height: 55px;
+}
+
+.contact_tab .input_component input, .contact_tab .input_component textarea, .contact_tab .input_component select {
   border: 1px solid #514949;
   opacity: .4;
+}
+
+.contact_tab .input_component button {
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 8.5px 15px;
+  background-color: var(--red);
+  color: var(--white);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 4.5px;
+}
+
+.with_button {
+  text-align: right;
+}
+
+.enrol_tab {
+  max-width: 900px;
+}
+
+.enrol_tab .all_inpu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.enrol_tab .input_component {
+  width: 48%;
+}
+
+.enrol_tab input, .enrol_tab textarea, .enrol_tab select {
+  height: 55px;
+}
+
+.enrol_tab .with_button {
+  text-align: left;
+}
+
+.enrol_tab .with_button button {
+  padding: 10.5px 20px;
+}
+
+@media (max-width: 768px) {
+  .enrol_tab .all_inpu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .enrol_tab .input_component {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

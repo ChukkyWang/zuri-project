@@ -3,12 +3,11 @@
         width: 100%;
         background-color: var(--off-red);
 
-        nav{
+        .all_nav{
                 width: 100%;
                 max-width: 1200px;
                 height: auto;
                 margin: 0 auto;
-                padding: 50px 10px;
                 display: flex;
                 justify-content: space-between;
 
@@ -67,4 +66,17 @@
 
 .welcome_text_training{
         max-width: 1200px;
+}
+
+
+.atInternship{
+        background-color: var(--white);
+}
+
+.all_nav{
+        padding: 50px 10px;
+}
+
+.atInternship_nav{
+        padding: 15px 10px;
 }

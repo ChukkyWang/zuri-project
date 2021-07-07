@@ -2,13 +2,13 @@ import React from 'react'
 import './style/style.css'
 function Contact() {
         return (
-                <div className="contact_tab">
+                <section className="contact_tab">
                         <h2>Get in touch for more enquiries</h2>
                         <p>Leave us a message we'll get back to you quickly</p>   
                         <form action="">
                                 <div className="input_component">
-                                        <label htmlFor="firstName">First Name <span>*</span></label>
-                                        <input type="text" name="firstName" id="firstName" />
+                                        <label htmlFor="fullName">Full name <span>*</span></label>
+                                        <input type="text" name="fullName" id="fullName" />
                                 </div>
                                 <div className="input_component">
                                         <label htmlFor="lastName">Email Address <span>*</span></label>
@@ -16,10 +16,16 @@ function Contact() {
                                 </div>
                                 <div className="input_component">
                                         <label htmlFor="message">Message <span>*</span></label>
-                                        <input type="textbox" name="message" id="message" />
+                                        <textarea type="textbox" name="message" rows={10} cols={10}  id="message" />
+                                </div>
+
+                                <div className="input_component with_button">
+                                        <button>
+                                                Send
+                                        </button>
                                 </div>
                         </form>          
-                </div>
+                </section>
         )
 }
 

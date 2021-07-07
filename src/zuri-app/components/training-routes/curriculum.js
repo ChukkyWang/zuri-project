@@ -2,9 +2,13 @@ import React from 'react'
 
 function Curriculum() {
         return (
-                <div>
-                     Curiculum   
-                </div>
+                <section>
+                        <div className="little_tab">
+                                
+                        </div> 
+                        <div className="main_discriber">
+                        </div> 
+                </section>
         )
 }
 

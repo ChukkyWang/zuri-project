@@ -7,7 +7,7 @@ import Logo from '../assets/images/zuri-logo-full.svg'
 import Training from '../assets/images/training.svg'
 import Internship from '../assets/images/internship.svg'
 import Talent from '../assets/images/talent.svg'
-import { TRAINING } from './utils/routes'
+import { HOME, INTERNSHIP, TRAINING } from './utils/routes'
 
 
 function Home() {
@@ -65,13 +65,15 @@ function Products() {
             item: 'Zuri Internship',
             logo: Internship,
             long: "We place you in a work simulation. We give you tasks every week, the tasks ranges from easy to hard as you progress from stage to stage, making it to the final stage means you are ready for actual work.",
-            click: "I want to join the internship >"
+            click: "I want to join the internship >",
+            url: INTERNSHIP
         },
         {
             item: 'Zuri Talent',
             logo: Talent,
             long: "Keeping pace with projects and being on the look out for the extremely talented individuals has become ever more challenging. Here is where Zuri Team comes into play to bring the best suited talent for your company",
-            click: "I am looking for talent >"
+            click: "I am looking for talent >",
+            url: HOME
         }
     ])
     return(

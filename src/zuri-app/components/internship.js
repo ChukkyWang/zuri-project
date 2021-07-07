@@ -1,19 +1,14 @@
 import React, {Fragment, lazy, Suspense} from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import TrainingHeader from './props/training-header'
-import { CONTACT, CURRICULUM, ENROL, TRAINING } from './utils/routes'
-
+import { CURRICULUM, TRAINING, CONTACT, ENROL } from './utils/routes'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 //Training Sub Page
 const Enrol  = lazy(() => import("./training-routes/enrol"))
 const Contact  = lazy(() => import("./training-routes/contact"))
 const Training  = lazy(() => import("./training-routes"))
 const Curriculum = lazy(() => import("./training-routes/curriculum"))
-
-
-
-
-function ZuriTraining() {
+function Internship() {
         const trainingRoutes = ([
                 {
                         route: TRAINING,
@@ -40,7 +35,7 @@ function ZuriTraining() {
                 <Fragment>
                         <Router>
                                 <TrainingHeader/>
-                                <Suspense fallback="Loading..">
+                                <Suspense fallback="Lo">
                                         <Switch>
                                                 {
                                                         trainingRoutes.map(route => (
@@ -54,4 +49,4 @@ function ZuriTraining() {
         )
 }
 
-export default ZuriTraining
+export default Internship

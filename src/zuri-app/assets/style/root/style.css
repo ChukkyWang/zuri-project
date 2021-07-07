@@ -4,7 +4,7 @@
   --font-color: #514949;
   --white: #fff;
   --off-white: #FFFAFA;
-  --off-red: #f2ebe9;
+  --off-red: rgb(247 243 242);
   --form-font: #495057
 ;
 }
@@ -35,7 +35,7 @@ a:hover {
   color: var(--hover-red);
 }
 
-input {
+input, textarea {
   display: block;
   width: 100%;
   padding: .375rem .75rem;
