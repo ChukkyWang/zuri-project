@@ -47,7 +47,7 @@ function TrainingHeader() {
                                 <NavClass thatIncludesHome={thatIncludesHome} atInternship={atInternship}/>
    
                         </nav>
-                        {show && <NavClass show={show} setShow={setShow} thatIncludesHome={thatIncludesHome} atInternship={atInternship}/>}
+                        {show && <NavClass  thatIncludesHome={thatIncludesHome} atInternship={atInternship}/>}
                         <div className={`bold_welcome ${atInternship && 'atInternship'}`}>
                                 <div className={`welcome_text_others ${!atContact && !atCurriculum && !atEnrol && "welcome_text_training"}`}>
                                         {
@@ -80,25 +80,25 @@ export default TrainingHeader
 
 
 //Nav Bar
-function NavClass({thatIncludesHome, atInternship, show, setShow}) {
+function NavClass({thatIncludesHome, atInternship, show}) {
         return(
                         <div className={`nav_content ${show && 'show_nav'}`}>
-                                <NavLink onClick={() => setShow(!show)} exact end as={Link} to={thatIncludesHome ? TRAINING : INTERNSHIP}>
+                                <NavLink exact end as={Link} to={thatIncludesHome ? TRAINING : INTERNSHIP}>
                                         Home
                                 </NavLink>
-                                <NavLink onClick={() => setShow(!show)} exact as={Link} to={thatIncludesHome ? CURRICULUM : INTERNSHIP}>
+                                <NavLink exact as={Link} to={thatIncludesHome ? CURRICULUM : INTERNSHIP}>
                                         Curriculum
                                 </NavLink>
                                 {
                                         atInternship && 
-                                        <NavLink onClick={() => setShow(!show)} exact as={Link} to={thatIncludesHome ? CURRICULUM : INTERNSHIP}>
+                                        <NavLink exact as={Link} to={thatIncludesHome ? CURRICULUM : INTERNSHIP}>
                                                 FAQ
                                         </NavLink> 
                                 }
-                                <NavLink onClick={() => setShow(!show)} exact as={Link} to={thatIncludesHome ? CONTACT : INTERNSHIP}>
+                                <NavLink exact as={Link} to={thatIncludesHome ? CONTACT : INTERNSHIP}>
                                         Contact
                                 </NavLink>
-                                <NavLink onClick={() => setShow(!show)} exact as={Link} to={thatIncludesHome ? ENROL : INTERNSHIP}>
+                                <NavLink exact as={Link} to={thatIncludesHome ? ENROL : INTERNSHIP}>
                                         <button>
                                                 {atInternship ? 'Enroll' : 'Join Zuri Training'}
                                         </button>
