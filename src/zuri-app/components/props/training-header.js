@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './style/training-header-style/training-header.css'
+import {GiHamburgerMenu} from 'react-icons/gi'
 import {NavLink, Link, useLocation, useHistory} from 'react-router-dom'
 import TrainingLogo from '../../assets/images/traininglogo.png'
 import InternshipLogo from '../../assets/images/internshiplogo.svg'
@@ -8,6 +9,9 @@ import TraImg from '../../assets/images/hero.png'
 import { CONTACT, CURRICULUM, ENROL, INTERNSHIP, TRAINING } from '../utils/routes'
 
 function TrainingHeader() {
+        
+
+        //Location
         const location = useLocation();
 
         const atHome = location.pathname === TRAINING;
@@ -24,6 +28,11 @@ function TrainingHeader() {
 
         const atEnrol = location.pathname.includes(ENROL)
 
+
+        //Toggle Switch
+        const [show, setShow] = useState(false);
+
+
         return (
                 <section className="training_header">
                         <nav className={`all_nav ${atInternship && 'atInternship_nav'}`}>
@@ -32,30 +41,13 @@ function TrainingHeader() {
                                                 <img src={thatIncludesHome ? TrainingLogo : InternshipLogo} alt="Zuri - Training" />
                                         </Link>
                                 </div>
-                                <div className="nav_content">
-                                        <NavLink exact end as={Link} to={thatIncludesHome ? TRAINING : INTERNSHIP}>
-                                                Home
-                                        </NavLink>
-                                        <NavLink exact as={Link} to={thatIncludesHome ? CURRICULUM : INTERNSHIP}>
-                                                Curriculum
-                                        </NavLink>
-                                        {
-                                                atInternship && 
-                                                <NavLink exact as={Link} to={thatIncludesHome ? CURRICULUM : INTERNSHIP}>
-                                                        FAQ
-                                                </NavLink> 
-                                        }
-                                        <NavLink exact as={Link} to={thatIncludesHome ? CONTACT : INTERNSHIP}>
-                                                Contact
-                                        </NavLink>
-                                        <NavLink exact as={Link} to={thatIncludesHome ? ENROL : INTERNSHIP}>
-                                                <button>
-                                                        {atInternship ? 'Enroll' : 'Join Zuri Training'}
-                                                </button>
-                                        </NavLink>
-
-                                </div>     
+                                <div onClick={() => setShow(!show)} className="toggle_button">
+                                        <GiHamburgerMenu/>
+                                </div>
+                                <NavClass thatIncludesHome={thatIncludesHome} atInternship={atInternship}/>
+   
                         </nav>
+                        {show && <NavClass show={show} setShow={setShow} thatIncludesHome={thatIncludesHome} atInternship={atInternship}/>}
                         <div className={`bold_welcome ${atInternship && 'atInternship'}`}>
                                 <div className={`welcome_text_others ${!atContact && !atCurriculum && !atEnrol && "welcome_text_training"}`}>
                                         {
@@ -87,6 +79,35 @@ export default TrainingHeader
 
 
 
+//Nav Bar
+function NavClass({thatIncludesHome, atInternship, show, setShow}) {
+        return(
+                        <div className={`nav_content ${show && 'show_nav'}`}>
+                                <NavLink onClick={() => setShow(!show)} exact end as={Link} to={thatIncludesHome ? TRAINING : INTERNSHIP}>
+                                        Home
+                                </NavLink>
+                                <NavLink onClick={() => setShow(!show)} exact as={Link} to={thatIncludesHome ? CURRICULUM : INTERNSHIP}>
+                                        Curriculum
+                                </NavLink>
+                                {
+                                        atInternship && 
+                                        <NavLink onClick={() => setShow(!show)} exact as={Link} to={thatIncludesHome ? CURRICULUM : INTERNSHIP}>
+                                                FAQ
+                                        </NavLink> 
+                                }
+                                <NavLink onClick={() => setShow(!show)} exact as={Link} to={thatIncludesHome ? CONTACT : INTERNSHIP}>
+                                        Contact
+                                </NavLink>
+                                <NavLink onClick={() => setShow(!show)} exact as={Link} to={thatIncludesHome ? ENROL : INTERNSHIP}>
+                                        <button>
+                                                {atInternship ? 'Enroll' : 'Join Zuri Training'}
+                                        </button>
+                                </NavLink>
+
+                        </div>  
+        )
+};
+
 
 
 
@@ -102,7 +123,7 @@ function TrainingInternshipHeader({atHome, atInternship}) {
                                         </h2>
                                         <p className={`key_text ${atInternship && 'intership_key_text'}`}>
                                                 {
-                                                        atHome ? "Basic introduction to software development and design aimed at complete beginners which anyone can join. Each week you'll be given course content, have opportunity to attend live classes and work on tasks to help you understand each topic better...<span>Read More</span>" : 'HNG Internship is a long running, large scale virtual internship for people learning to code and design. It focuses on the post-training phase, and creates a virtual work environment for participants. It is fast paced and challenging, and helps people learn how to work in teams, deal with pressure and quickly expand their knowledge.'
+                                                        atHome ? <span style={{textTransform: 'unset'}}>Basic introduction to software development and design aimed at complete beginners which anyone can join. Each week you'll be given course content, have opportunity to attend live classes and work on tasks to help you understand each topic better...<span>Read More</span></span> : 'HNG Internship is a long running, large scale virtual internship for people learning to code and design. It focuses on the post-training phase, and creates a virtual work environment for participants. It is fast paced and challenging, and helps people learn how to work in teams, deal with pressure and quickly expand their knowledge.'
                                                 }
                                                 
                                         </p>

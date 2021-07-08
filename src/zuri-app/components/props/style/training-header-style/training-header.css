@@ -15,6 +15,10 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
 }
 
 .training_header .all_nav .nav_content {
@@ -77,6 +81,15 @@
   text-align: left;
 }
 
+.welcome_text_training .key_text {
+  color: unset;
+  font-weight: 100;
+  opacity: 0.95;
+  margin: 10px 0px;
+  line-height: 24px;
+  text-transform: unset;
+}
+
 .atInternship {
   background-color: var(--white);
 }
@@ -126,12 +139,15 @@
 }
 
 .header_class_component .welcome_bold_texts .key_text {
-  text-transform: unset;
   color: var(--font-color);
   font-weight: 100;
   opacity: 0.95;
   margin: 10px 0px;
   line-height: 24px;
+}
+
+.header_class_component .welcome_bold_texts .key_text p {
+  text-transform: unset;
 }
 
 .header_class_component .welcome_bold_texts .intership_key_text {
@@ -210,6 +226,43 @@
   }
   .welcome_bold_images, .welcome_bold_texts, .internship_flex {
     width: 100%;
+  }
+}
+
+.toggle_button {
+  display: none;
+  margin-right: 10px;
+}
+
+.toggle_button * {
+  color: var(--red);
+  font-size: 22px;
+}
+
+.show_nav {
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  padding: 0rem 1.5rem 0.75rem;
+  display: none;
+}
+
+.show_nav a {
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+  .toggle_button {
+    display: block;
+  }
+  .show_nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 /*# sourceMappingURL=training-header.css.map */

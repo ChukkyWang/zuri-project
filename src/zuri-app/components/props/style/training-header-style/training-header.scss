@@ -10,6 +10,8 @@
                 margin: 0 auto;
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
+                padding: 20px;
 
                 .nav_content{
                         display: block;
@@ -77,6 +79,15 @@
         *{
                 text-align: left;
         };
+
+        .key_text{
+                color: unset;
+                font-weight: 100;
+                opacity: 0.95;
+                margin: 10px 0px;
+                line-height: 24px;
+                text-transform: unset;
+        }
 }
 
 
@@ -130,12 +141,15 @@
                 }
 
                 .key_text{
-                        text-transform: unset;
                         color: var(--font-color);
                         font-weight: 100;
                         opacity: 0.95;
                         margin: 10px 0px;
                         line-height: 24px;
+
+                        p{
+                                text-transform: unset;
+                        }
                 }
 
                 .intership_key_text{
@@ -230,4 +244,46 @@
                 width: 100%;
         }
 }
+
+
+
+
+//Toggle Button and Style
+
+
+
+.toggle_button{
+        display: none;
+        margin-right: 10px;
+
+        *{
+                color: var(--red);
+                font-size: 22px;
+        }
+}
+
+.show_nav{
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        padding: 0rem 1.5rem 0.75rem;
+        display: none;
+        
+
+        a{
+                margin: 1rem 0;
+                font-weight: 500;
+        }
+}
+
+@media only screen and (max-width: 768px){
+        .toggle_button{
+                display: block;
+        }
+
+        .show_nav{
+                display: flex;
+        }
+}
+
 
