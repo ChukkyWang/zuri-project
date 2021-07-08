@@ -206,7 +206,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 1rem 1.5rem;
+    padding: 1.5rem 1rem;
   }
   .training_header .welcome_bold_images, .training_header .welcome_bold_texts, .training_header .internship_flex {
     width: 100%;

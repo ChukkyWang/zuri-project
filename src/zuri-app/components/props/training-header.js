@@ -35,19 +35,19 @@ function TrainingHeader() {
                                         <NavLink exact end as={Link} to={thatIncludesHome ? TRAINING : INTERNSHIP}>
                                                 Home
                                         </NavLink>
-                                        <NavLink exact as={Link} to={CURRICULUM}>
+                                        <NavLink exact as={Link} to={thatIncludesHome ? CURRICULUM : INTERNSHIP}>
                                                 Curriculum
                                         </NavLink>
                                         {
                                                 atInternship && 
-                                                <NavLink exact as={Link} to={CURRICULUM}>
+                                                <NavLink exact as={Link} to={thatIncludesHome ? CURRICULUM : INTERNSHIP}>
                                                         FAQ
                                                 </NavLink> 
                                         }
-                                        <NavLink exact as={Link} to={CONTACT}>
+                                        <NavLink exact as={Link} to={thatIncludesHome ? CONTACT : INTERNSHIP}>
                                                 Contact
                                         </NavLink>
-                                        <NavLink exact as={Link} to={ENROL}>
+                                        <NavLink exact as={Link} to={thatIncludesHome ? ENROL : INTERNSHIP}>
                                                 <button>
                                                         {atInternship ? 'Enrol' : 'Join Zuri Training'}
                                                 </button>

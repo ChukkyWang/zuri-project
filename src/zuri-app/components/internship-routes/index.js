@@ -13,6 +13,7 @@ function InternHome() {
                 <section>
                         <About/>
                         <Tracks/>
+                        <EnrolToday/>
                 </section>
         )
 }
@@ -102,7 +103,7 @@ function About() {
 }
 
 
-
+//Tracks
 
 
 function Tracks() {
@@ -175,5 +176,23 @@ function Tracks() {
                                 }
                         </div>
                 </section>
+        )
+}
+
+
+
+
+//Get Started
+
+function EnrolToday() {
+        return(
+                <div className="enrol_today">
+                        <div className="enrol_content">
+                                <h2>Break into the tech industry like a pro</h2>
+                                <button>
+                                        Enrol Today
+                                </button>
+                        </div>
+                </div>
         )
 }
