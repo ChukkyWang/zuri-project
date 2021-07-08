@@ -1,6 +1,6 @@
 import React, {Fragment, lazy, Suspense} from 'react'
 import TrainingHeader from './props/training-header'
-import { CURRICULUM, TRAINING, CONTACT, ENROL, INTERNSHIP } from './utils/routes'
+import { CURRICULUM, CONTACT, ENROL, INTERNSHIP } from './utils/routes'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 

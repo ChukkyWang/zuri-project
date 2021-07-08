@@ -166,7 +166,7 @@ function Tracks() {
                         <div className="courses_card_cage">
                                 {
                                         courses.map(course => (
-                                                <div className="courses_card" style={{backgroundColor: `${course.color}`}}>
+                                                <div key={course.header} className="courses_card" style={{backgroundColor: `${course.color}`}}>
                                                         <h3>{course.header}</h3>
                                                         <p>{course.body}</p>
                                                         <hr/>
