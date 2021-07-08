@@ -3,11 +3,7 @@ import React from 'react'
 function Curriculum() {
         return (
                 <section>
-                        <div className="little_tab">
-                                
-                        </div> 
-                        <div className="main_discriber">
-                        </div> 
+                        <h4>Loading...</h4>
                 </section>
         )
 }
