@@ -4,6 +4,7 @@ import {NavLink, Link, useLocation, useHistory} from 'react-router-dom'
 import TrainingLogo from '../../assets/images/traininglogo.png'
 import InternshipLogo from '../../assets/images/internshiplogo.svg'
 import IntImg from '../../assets/images/internshiphero.png'
+import TraImg from '../../assets/images/hero.png'
 import { CONTACT, CURRICULUM, ENROL, INTERNSHIP, TRAINING } from '../utils/routes'
 
 function TrainingHeader() {
@@ -11,7 +12,7 @@ function TrainingHeader() {
 
         const atHome = location.pathname === TRAINING;
 
-        const atInternship = location.pathname === INTERNSHIP
+        const atInternship = location.pathname === INTERNSHIP;
 
         const thatIncludesHome = location.pathname.includes(TRAINING);
 
@@ -49,7 +50,7 @@ function TrainingHeader() {
                                         </NavLink>
                                         <NavLink exact as={Link} to={thatIncludesHome ? ENROL : INTERNSHIP}>
                                                 <button>
-                                                        {atInternship ? 'Enrol' : 'Join Zuri Training'}
+                                                        {atInternship ? 'Enroll' : 'Join Zuri Training'}
                                                 </button>
                                         </NavLink>
 
@@ -115,12 +116,12 @@ function TrainingInternshipHeader({atHome, atInternship}) {
                                                         </div>
 
                                                         <button className="ing_button">
-                                                                Enrol Today
+                                                                Enroll Today
                                                         </button>
                                                 </div> :
                                                 <div className={`ingressive_enrol ${atInternship && 'internship_flex'}`}>
                                                         <button className="ing_button at_button">
-                                                                Enrol Today
+                                                                Enroll Today
                                                         </button>
 
                                                         <div className="img_ing">
@@ -134,9 +135,9 @@ function TrainingInternshipHeader({atHome, atInternship}) {
 
                                 </div>
                                 <div className="welcome_bold_images">
-                                        {
-                                                atInternship ? <img className="internship_hero" src={IntImg} alt="Zuri Internship" /> : ''
-                                        }
+                                        
+                                                <img className="internship_hero" src={atInternship ? IntImg : TraImg} alt="Zuri Internship" />
+                                        
                                 </div>
                         </div>
                 </section>

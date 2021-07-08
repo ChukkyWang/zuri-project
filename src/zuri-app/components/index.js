@@ -1,6 +1,7 @@
 import React from 'react'
 import '../assets/style/home/style.css'
 import Logo from '../assets/images/zuri-logo-full.svg'
+import { useHistory } from 'react-router-dom'
 
 
 //Product Images
@@ -28,17 +29,20 @@ export default Home
 //Welcome
 
 function Buzz() {
+    const history = useHistory()
+
+
     return(
         <section className="buzz_welcome">
             <div className="buzz_content">
                 <img src={Logo} alt="Zuri Logo"/>
                 <h2>Learn, Build, Grow.</h2>
-                <p>Unlock your Brilliance with our hands-on <a href="">beginner</a> and <a href="">expert training</a>. Zuri Team has been immensely successful in creating a global network of a highly adept intelligent workforce that can help your company achieve their mission-critical <a href="">projects and goals</a></p>
+                <p>Unlock your Brilliance with our hands-on <a href={TRAINING}>beginner</a> and <a href={INTERNSHIP}>expert training</a>. Zuri Team has been immensely successful in creating a global network of a highly adept intelligent workforce that can help your company achieve their mission-critical <a href="">projects and goals</a></p>
                 <div className="welcome_btns">
-                    <button className="new_button">
+                    <button onClick={() => history.push(TRAINING)} className="new_button">
                         I'm new in the Industry
                     </button>
-                    <button className="new_industry">
+                    <button onClick={() => history.push(INTERNSHIP)} className="new_industry">
                         I need Industry experience
                     </button>
                 </div>

@@ -47,51 +47,51 @@
   color: var(--red);
 }
 
-.training_header .welcome_text_others {
+.welcome_text_others {
   max-width: 600px;
   margin: 0px auto;
-  padding: 60px 15px 100px;
+  padding: 48px 15px 90px;
 }
 
-.training_header .welcome_text_others * {
+.welcome_text_others * {
   text-align: center;
 }
 
-.training_header .welcome_text_others p {
+.welcome_text_others p {
   text-transform: uppercase;
   color: var(--red);
   font-weight: 400;
   margin-bottom: 8px;
 }
 
-.training_header .welcome_text_others h2 {
+.welcome_text_others h2 {
   font-size: 2rem;
   font-weight: 700;
 }
 
-.training_header .welcome_text_training {
+.welcome_text_training {
   max-width: 1200px;
 }
 
-.training_header .welcome_text_training * {
+.welcome_text_training * {
   text-align: left;
 }
 
-.training_header .atInternship {
+.atInternship {
   background-color: var(--white);
 }
 
-.training_header .all_nav {
+.all_nav {
   padding: 50px 10px;
   text-align: center;
 }
 
-.training_header .atInternship_nav {
+.atInternship_nav {
   padding: 15px 10px;
   text-align: unset;
 }
 
-.training_header .header_class_component {
+.header_class_component {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,22 +110,22 @@
   padding: unset;
 }
 
-.training_header .header_class_component * {
+.header_class_component * {
   font-family: Averta, monospace;
 }
 
-.training_header .header_class_component .welcome_bold_texts .hero_bold_text {
+.header_class_component .welcome_bold_texts .hero_bold_text {
   font-weight: 400;
   font-size: 40px;
   line-height: 45px;
 }
 
-.training_header .header_class_component .welcome_bold_texts .intership_bold_text {
+.header_class_component .welcome_bold_texts .intership_bold_text {
   font-size: 30px;
   font-weight: 700;
 }
 
-.training_header .header_class_component .welcome_bold_texts .key_text {
+.header_class_component .welcome_bold_texts .key_text {
   text-transform: unset;
   color: var(--font-color);
   font-weight: 100;
@@ -134,25 +134,25 @@
   line-height: 24px;
 }
 
-.training_header .header_class_component .welcome_bold_texts .intership_key_text {
+.header_class_component .welcome_bold_texts .intership_key_text {
   font-size: 13.25px;
 }
 
-.training_header .ingressive_enrol {
+.ingressive_enrol {
   margin-top: 30px;
 }
 
-.training_header .ingressive_enrol img {
+.ingressive_enrol img {
   width: 180px;
   height: auto;
 }
 
-.training_header .ingressive_enrol .powered {
+.ingressive_enrol .powered {
   color: black;
   text-transform: unset;
 }
 
-.training_header .ingressive_enrol .ing_button {
+.ingressive_enrol .ing_button {
   font-size: inherit;
   font-weight: inherit;
   padding: 8.5px 15px;
@@ -164,51 +164,51 @@
   margin-top: 36px;
 }
 
-.training_header .ingressive_enrol .at_button {
+.ingressive_enrol .at_button {
   margin-top: 12px;
   margin-bottom: 24px;
 }
 
-.training_header .internship_hero {
+.internship_hero {
   display: block;
   margin-left: auto;
   width: auto;
 }
 
-.training_header .welcome_bold_images {
+.welcome_bold_images {
   width: 60%;
 }
 
-.training_header .internship_flex {
+.internship_flex {
   width: 50%;
 }
 
-.training_header .internship_flex .powered {
+.internship_flex .powered {
   margin-top: 20px;
 }
 
-.training_header .welcome_bold_texts {
+.welcome_bold_texts {
   width: 40%;
 }
 
 @media (max-width: 768px) {
-  .training_header .training_header .all_nav .nav_content {
+  .training_header .all_nav .nav_content {
     display: none;
   }
-  .training_header .internship_hero {
+  .internship_hero {
     display: block;
     margin: 3rem auto;
     margin-left: unset;
     width: 100%;
   }
-  .training_header .header_class_component {
+  .header_class_component {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 1.5rem 1rem;
   }
-  .training_header .welcome_bold_images, .training_header .welcome_bold_texts, .training_header .internship_flex {
+  .welcome_bold_images, .welcome_bold_texts, .internship_flex {
     width: 100%;
   }
 }

@@ -1,13 +1,25 @@
 import React from 'react'
 import LogoFooter from '../../assets/images/zuri-logo-full.svg'
 import './style/footer/footer.css'
+import {useLocation} from 'react-router-dom'
+import TrainingLogo from '../../assets/images/traininglogo.png'
+import InternshipLogo from '../../assets/images/internshiplogo.svg'
+
+
 //Socials
 import Facebook from '../../assets/images/fb.png'
 import Twitter from '../../assets/images/twitter.png'
 import LinkedIn from '../../assets/images/in.png'
 import Instagram from '../../assets/images/IG.png'
+import { HOME, INTERNSHIP, TRAINING } from '../utils/routes'
 
 function ZuriFooter() {
+
+    const location = useLocation();
+
+    const thatIncludesHome = location.pathname.includes(TRAINING);
+
+    const thatIncludesInternship = location.pathname.includes(INTERNSHIP)
         
         const socials = ([
             {
@@ -36,7 +48,7 @@ function ZuriFooter() {
                 <div className="contact_links">
                     <ul>
                         <li>
-                            <img src={LogoFooter} alt="" />
+                            <img src={thatIncludesHome ? TrainingLogo: thatIncludesInternship ? InternshipLogo : LogoFooter} alt="" />
                         </li>
                         <li>
                             <h4 className="footer_heading">
@@ -46,7 +58,7 @@ function ZuriFooter() {
                                 <a href="https://flutterwave.com/store/zuriteam">Store</a>
                             </p>
                             <p className="items">
-                                <a href="https://blog.zuri.team/">Blog</a>
+                                <a href={HOME}>Blog</a>
                             </p>
                         </li>
                         <li>
