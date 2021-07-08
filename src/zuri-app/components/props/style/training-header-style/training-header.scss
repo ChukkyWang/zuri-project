@@ -12,6 +12,7 @@
                 justify-content: space-between;
 
                 .nav_content{
+                        display: block;
                         a{
                                 color:rgba(0,0,0,.5);
                                 font-weight: 100;
@@ -25,9 +26,13 @@
                                         color: var(--white);
                                         cursor: pointer;
                                         outline: none;
-                                        border: none;
+                                        border: 1px solid var(--red);
                                 }
-                        }
+
+                                button:hover{
+                                        background-color: transparent;
+                                        color: var(--red);
+                                }
 
                         a:hover{
                                 color: var(--red);
@@ -66,6 +71,10 @@
 
 .welcome_text_training{
         max-width: 1200px;
+
+        *{
+                text-align: left;
+        };
 }
 
 
@@ -75,8 +84,149 @@
 
 .all_nav{
         padding: 50px 10px;
+        text-align: center;
+        
 }
 
 .atInternship_nav{
         padding: 15px 10px;
+        text-align: unset;
+        
+}
+
+
+
+
+//Welcom header for Internship and Training
+
+
+.header_class_component{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 0px;
+        padding: unset;
+
+        *{
+                font-family: Averta, monospace;
+        }
+
+
+        .welcome_bold_texts{
+
+                .hero_bold_text{
+                    font-weight: 400; 
+                    font-size: 40px;
+                    line-height: 45px;   
+                }
+
+                .intership_bold_text{
+                        font-size: 30px; 
+                        font-weight: 700; 
+                }
+
+                .key_text{
+                        text-transform: unset;
+                        color: var(--font-color);
+                        font-weight: 100;
+                        opacity: 0.95;
+                        margin: 10px 0px;
+                        line-height: 24px;
+                }
+
+                .intership_key_text{
+                        font-size: 13.25px;
+                }
+        }
+}
+
+
+.ingressive_enrol{
+        margin-top: 30px;
+        img{
+                width: 180px;
+                height: auto;
+        }
+
+
+        .powered{
+                color: black;
+                text-transform: unset;
+        }
+
+        .ing_button{
+                font-size: inherit;
+                font-weight: inherit;
+                padding: 8.5px 15px;
+                background-color: var(--red);
+                color: var(--white);
+                cursor: pointer;
+                outline: none;
+                border: none;
+                margin-top: 36px;
+        }
+
+        .at_button{
+                margin-top: 12px;
+                margin-bottom: 24px;
+        }
+}
+
+.welcome_bold_images{
+        
+}
+
+.internship_hero{
+        display: block;
+        margin-left: auto;
+        width: auto;
+}
+
+.welcome_bold_images{
+        width: 60%;
+}
+
+.internship_flex{
+        width: 50%;
+
+        .powered{
+                margin-top: 20px;
+        }
+}
+
+.welcome_bold_texts{
+        width: 40%;
+}
+
+
+
+@media (max-width: 768px) {
+
+        .training_header{
+                .all_nav{
+                        .nav_content{
+                                display: none;
+                        }
+                }
+        }
+
+        .internship_hero{
+                display: block;
+                margin: 3rem auto;
+                margin-left: unset;
+                width: 100%;
+        }
+
+        .header_class_component{
+                flex-direction: column;
+                padding: 1rem 1.5rem;
+        }
+
+        .welcome_bold_images, .welcome_bold_texts, .internship_flex{
+                width: 100%;
+        }
+}
+
 }

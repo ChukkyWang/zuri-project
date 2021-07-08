@@ -1,0 +1,141 @@
+.about_internship {
+  padding: 1.5rem 2rem;
+  background-color: #fefaff;
+}
+
+.about_value {
+  margin: 0 auto;
+  max-width: 1150px;
+}
+
+.about_header {
+  max-width: 1100px;
+  margin: 28px auto 38px;
+  padding: 7.5px 10px;
+}
+
+.about_header p {
+  color: var(--red);
+  opacity: 0.8;
+  margin: 7px 0px;
+}
+
+.about_header h4 {
+  line-height: 24px;
+}
+
+.about_value .flip_about {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.indice_about {
+  max-width: 1100px;
+  width: 100%;
+  margin: 10px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.ad_img, .ad_text {
+  width: 50%;
+  padding: 10px;
+}
+
+.ad_img img {
+  width: 100%;
+  height: auto;
+}
+
+.ad_text {
+  padding: 25px;
+}
+
+.ad_text h2 {
+  line-height: 30px;
+  margin-bottom: 8px;
+}
+
+.ad_text article {
+  padding: 10px 0px;
+}
+
+.ad_text article p, .ad_text article li, .ad_text article ul {
+  margin: 10px 0px;
+  line-height: 25px;
+  opacity: 0.9;
+}
+
+.ad_text a {
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .ad_img, .ad_text {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+.track_cards {
+  width: 100%;
+  max-width: 1200px;
+  padding: 1.5rem 2rem;
+  margin: 0 auto;
+}
+
+.courses_card_cage {
+  padding: 15px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.courses_card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 31%;
+          flex: 1 1 31%;
+  margin: 30px 12px;
+  padding: 10px 20px 25px;
+  border-radius: 0.25rem;
+}
+
+.courses_card h3 {
+  margin: 25px 0px;
+  color: #514949;
+}
+
+.courses_card p {
+  line-height: 24px;
+  margin: 25px 0px;
+}
+
+.courses_card hr {
+  margin-bottom: 25px;
+  opacity: 0.3;
+}
+
+.courses_card small {
+  margin: 25px 0px;
+}
+/*# sourceMappingURL=internship.css.map */

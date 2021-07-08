@@ -3,6 +3,7 @@ import './style/training-header-style/training-header.css'
 import {NavLink, Link, useLocation, useHistory} from 'react-router-dom'
 import TrainingLogo from '../../assets/images/traininglogo.png'
 import InternshipLogo from '../../assets/images/internshiplogo.svg'
+import IntImg from '../../assets/images/internshiphero.png'
 import { CONTACT, CURRICULUM, ENROL, INTERNSHIP, TRAINING } from '../utils/routes'
 
 function TrainingHeader() {
@@ -91,19 +92,51 @@ export default TrainingHeader
 function TrainingInternshipHeader({atHome, atInternship}) {
         return(
                 <section className="header_class">
-                        {atHome ? <Link to={INTERNSHIP}>
-                                Internship
-                        </Link> : <Link to={TRAINING}>
-                                Training
-                        </Link>}
                         <div className="header_class_component">
-                                <div className="welcome_bold_texts">
-                                        <h2>
-                                                Gain enough knowledge to help scale through the tech industry for free.
+                                <div className={`welcome_bold_texts ${atInternship && "internship_flex"}`}>
+                                        <h2 className={`hero_bold_text ${atInternship && 'intership_bold_text'}`}>
+                                                {
+                                                        atHome ? 'Gain enough knowledge to help scale through the tech industry for free.' : 'Sign up for HNG Internship 8 - Operated by Zuri.'
+                                                }
                                         </h2>
+                                        <p className={`key_text ${atInternship && 'intership_key_text'}`}>
+                                                {
+                                                        atHome ? "Basic introduction to software development and design aimed at complete beginners which anyone can join. Each week you'll be given course content, have opportunity to attend live classes and work on tasks to help you understand each topic better...<span>Read More</span>" : 'HNG Internship is a long running, large scale virtual internship for people learning to code and design. It focuses on the post-training phase, and creates a virtual work environment for participants. It is fast paced and challenging, and helps people learn how to work in teams, deal with pressure and quickly expand their knowledge.'
+                                                }
+                                                
+                                        </p>
+
+                                        {
+                                                atHome ? 
+                                                <div className="ingressive_enrol">
+                                                        <div className="img_ing">
+                                                                <p className="powered">Powered by</p>
+                                                                <img src="https://ingressive.org/wp-content/uploads/2020/05/I4G-Logo-Color-Cropped.png" alt="Ingressive" />
+                                                        </div>
+
+                                                        <button className="ing_button">
+                                                                Enrol Today
+                                                        </button>
+                                                </div> :
+                                                <div className={`ingressive_enrol ${atInternship && 'internship_flex'}`}>
+                                                        <button className="ing_button at_button">
+                                                                Enrol Today
+                                                        </button>
+
+                                                        <div className="img_ing">
+                                                                <p className="powered">In Partnership with...</p>
+                                                                <img src="https://ingressive.org/wp-content/uploads/2020/05/I4G-Logo-Color-Cropped.png" alt="Ingressive" />
+                                                        </div>
+
+                                                        
+                                                </div>
+                                        }
+
                                 </div>
                                 <div className="welcome_bold_images">
-
+                                        {
+                                                atInternship ? <img className="internship_hero" src={IntImg} alt="Zuri Internship" /> : ''
+                                        }
                                 </div>
                         </div>
                 </section>

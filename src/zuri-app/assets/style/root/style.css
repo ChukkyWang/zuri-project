@@ -35,7 +35,7 @@ a:hover {
   color: var(--hover-red);
 }
 
-input, textarea {
+input, textarea, select {
   display: block;
   width: 100%;
   padding: .375rem .75rem;

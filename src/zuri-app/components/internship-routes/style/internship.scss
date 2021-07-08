@@ -1,0 +1,129 @@
+.about_internship{
+        padding: 1.5rem 2rem;
+        background-color: #fefaff;
+}
+
+.about_value{
+        margin: 0 auto;
+        max-width: 1150px;
+}
+
+.about_header{
+        max-width: 1100px;
+        margin: 28px auto 38px;
+        padding: 7.5px 10px;
+
+        p{
+                color: var(--red);
+                opacity: 0.8;
+                margin: 7px 0px;
+        }
+
+        h4{
+                line-height: 24px;
+        }
+}
+
+.about_value .flip_about{
+        flex-direction: row-reverse;
+}
+
+.indice_about{
+        max-width: 1100px;
+        width: 100%;
+        margin:  10px auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: row;
+
+}
+
+.ad_img, .ad_text{
+        width: 50%;
+        padding: 10px;
+}
+
+
+.ad_img{
+        img{
+                width: 100%;
+                height: auto;
+        }
+}
+
+.ad_text{
+        padding: 25px;
+        h2{
+                line-height: 30px;
+                margin-bottom: 8px;
+        }
+
+        article{
+                padding: 10px 0px;
+
+                p, li, ul{
+                        margin: 10px 0px;
+                        line-height: 25px;
+                        opacity: 0.9;
+                }
+        }
+
+        a{
+                font-weight: 500;
+        }
+}
+
+
+@media (max-width: 768px) {
+        .ad_img, .ad_text{
+                width: 100%;
+                padding: 15px;
+        }
+}
+
+
+
+//Track Cards
+
+.track_cards{
+        width: 100%;
+        max-width: 1200px;
+        padding: 1.5rem 2rem;
+        margin: 0 auto;
+}
+
+.courses_card_cage{
+        padding: 15px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+}
+
+.courses_card{
+        flex: 1 1 31%;
+        margin: 30px 12px;
+        padding: 10px 20px 25px;
+        border-radius: 0.25rem;
+
+        h3{
+                margin: 25px 0px;
+                color: #514949;
+        }
+
+        p{
+                line-height: 24px;
+                margin: 25px 0px;
+        }
+
+        hr{
+                margin-bottom: 25px;
+                opacity: 0.3;
+        }
+
+        small{
+                margin: 25px 0px;
+        }
+}
