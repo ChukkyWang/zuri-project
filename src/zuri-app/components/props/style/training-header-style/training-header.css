@@ -255,6 +255,26 @@
   font-weight: 500;
 }
 
+.show_nav a button {
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 8.5px 15px;
+  background-color: var(--red);
+  color: var(--white);
+  cursor: pointer;
+  outline: none;
+  border: 1px solid var(--red);
+}
+
+.show_nav a button:hover {
+  background-color: transparent;
+  color: var(--red);
+}
+
+.show_nav a a:hover {
+  color: var(--red);
+}
+
 @media only screen and (max-width: 768px) {
   .toggle_button {
     display: block;

@@ -47,7 +47,7 @@ function TrainingHeader() {
                                 <NavClass thatIncludesHome={thatIncludesHome} atInternship={atInternship}/>
    
                         </nav>
-                        {show && <NavClass  thatIncludesHome={thatIncludesHome} atInternship={atInternship}/>}
+                        {show && <NavClass show={show} thatIncludesHome={thatIncludesHome} atInternship={atInternship}/>}
                         <div className={`bold_welcome ${atInternship && 'atInternship'}`}>
                                 <div className={`welcome_text_others ${!atContact && !atCurriculum && !atEnrol && "welcome_text_training"}`}>
                                         {
